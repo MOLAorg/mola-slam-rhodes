@@ -15,15 +15,19 @@
  *
  */
 
-//#include <mola-slam-rhodes/OccGrid.h>
+#include <mola-slam-rhodes/OccGrid.h>
 #include <mrpt/core/initializer.h>
+#include <mrpt/rtti/CObject.h>
+
 using namespace mola::rhodes;
 
 MRPT_INITIALIZER(do_register_slam_rhodes)
 {
+    using mrpt::rtti::registerClass;
+
     // Register modules:
-    //MOLA_REGISTER_MODULE(xx);
+    // MOLA_REGISTER_MODULE(xx);
 
     // and register RTTI info:
-    // xx
+    registerClass(CLASS_ID(mola::rhodes::OccGrid));
 }
